@@ -1,0 +1,133 @@
+<div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3 py-4">
+    <% if(categories) { %>
+        <% categories.forEach((category, index)=> { %>
+            <a href="/categories/<%=category.name %>" class="col text-center category__link">
+                <div class="category__img shadow">
+                    <img src="<%= category.image %>" alt="" loading="lazy">
+                </div>
+                <div class="pt-1">
+                    <%= category.name %>
+                </div>
+            </a>
+            <% }) %>
+                <% } %>
+                    <a href="/categories" class="col text-center category__link">
+                        <div class="category__img shadow">
+                            <img src="https://picsum.photos/id/9/400/300" alt="View All Categories" loading="lazy">
+                        </div>
+                        <div class="pt-1">View All</div>
+                    </a>
+</div>
+
+
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Latest articles</h2>
+        <a href="/explore-latest" class="ms-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+
+
+        <% if(articles){ %>
+            <% articles.latest.forEach((article, index)=> { %>
+                <a href="/article/<%= article._id %>" class="col text-center category__link">
+                    <div class="category__img  category__img--large shadow">
+                        <img src="/uploads/<%= article.image %>" alt="" loading="lazy">
+                    </div>
+                    <div class="pt-1">
+                        <%= article.title %>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } %>
+
+    </div>
+</section>
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Articles about Study</h2>
+        <a href="/categories/study" class="ms-auto">View More</a>
+    </div>
+
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(articles){ %>
+            <% articles.study.forEach((article, index)=> { %>
+                <a href="/article/<%= article._id %>" class="col text-center category__link">
+                    <div class="category__img  category__img--large shadow">
+                        <img src="/uploads/<%= article.image %>" alt="" loading="lazy">
+                    </div>
+                    <div class="pt-1">
+                        <%= article.title %>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } %>
+    </div>
+</section>
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Articles about Fantasy</h2>
+        <a href="/categories/fantasy" class="ms-auto">View More</a>
+    </div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(articles){ %>
+            <% articles.fantasy.forEach((article, index)=> { %>
+                <a href="/article/<%= article._id %>" class="col text-center category__link">
+                    <div class="category__img  category__img--large shadow">
+                        <img src="/uploads/<%= article.image %>" alt="" loading="lazy">
+                    </div>
+                    <div class="pt-1">
+                        <%= article.title %>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } %>
+    </div>
+</section>
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Articles about IT</h2>
+        <a href="/categories/it" class="ms-auto">View More</a>
+    </div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(articles){ %>
+            <% articles.it.forEach((article, index)=> { %>
+                <a href="/article/<%= article._id %>" class="col text-center category__link">
+                    <div class="category__img  category__img--large shadow">
+                        <img src="/uploads/<%= article.image %>" alt="" loading="lazy">
+                    </div>
+                    <div class="pt-1">
+                        <%= article.title %>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } %>
+    </div>
+</section>
+
+
+<section class="pb-4 pt-4">
+    <div class="d-flex mb-2 align-items-center">
+        <h2>Articles about Fashion</h2>
+        <a href="/categories/fashion" class="ms-auto">View More</a>
+    </div>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <% if(articles){ %>
+            <% articles.fashion.forEach((article, index)=> { %>
+                <a href="/article/<%= article._id %>" class="col text-center category__link">
+                    <div class="category__img  category__img--large shadow">
+                        <img src="/uploads/<%= article.image %>" alt="" loading="lazy">
+                    </div>
+                    <div class="pt-1">
+                        <%= article.title %>
+                    </div>
+                </a>
+                <% }) %>
+                    <% } %>
+    </div>
+</section>

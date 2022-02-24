@@ -1,0 +1,18 @@
+<h1 class="pb-4">
+    <%= title %>
+</h1>
+
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+    <% if(article){ %>
+        <% article.forEach((item, index)=> { %>
+            <a href="/article/<%= item._id %>" class="col text-center category__link">
+                <div class="category__img  category__img--large shadow">
+                    <img src="/uploads/<%= item.image %>" alt="" loading="lazy">
+                </div>
+                <div class="pt-1">
+                    <%= item.title %>
+                </div>
+            </a>
+            <% }) %>
+                <% } %>
+</div>
